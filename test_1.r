@@ -22,3 +22,21 @@ IRdata <- IRdata %>%
   set_value_labels(fp_know_any = c(yes = 1, no = 0)) %>%
   set_variable_labels(fp_know_any = "Know any contraceptive method")
 
+
+#code area 2 from Github
+# Female sterilization  
+IRdata <- IRdata %>%
+  mutate(fp_know_fster = 
+           ifelse(v304_06>0 & v304_06<8, 1, 0)) %>%
+  set_value_labels(fp_know_fster = c(yes = 1, no = 0)) %>%
+  set_variable_labels(fp_know_fster = "Know female sterilization")
+
+
+
+
+
+
+
+
+
+
