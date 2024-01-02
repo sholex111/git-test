@@ -40,7 +40,13 @@ IRdata <- IRdata %>%
   set_variable_labels(fp_know_mster = "Know male sterilization")
 
 
-
+#feature1 #code area 4
+# The contraceptive pill 
+IRdata <- IRdata %>%
+  mutate(fp_know_pill = 
+           ifelse(v304_01>0 & v304_01<8, 1, 0)) %>%
+  set_value_labels(fp_know_pill = c(yes = 1, no = 0)) %>%
+  set_variable_labels(fp_know_pill = "Know pill")
 
 
 
