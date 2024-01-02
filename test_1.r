@@ -32,6 +32,13 @@ IRdata <- IRdata %>%
   set_variable_labels(fp_know_fster = "Know female sterilization")
 
 
+#main #code area 3
+# Injectables (Depo-Provera) 
+IRdata <- IRdata %>%
+  mutate(fp_know_inj = 
+           ifelse(v304_03>0 & v304_03<8, 1, 0)) %>%
+  set_value_labels(fp_know_inj = c(yes = 1, no = 0)) %>%
+  set_variable_labels(fp_know_inj = "Know injectables")
 
 
 
