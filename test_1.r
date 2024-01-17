@@ -62,4 +62,9 @@ IRdata <- IRdata %>%
 
 
 #feature1 #code area 5
-
+# Male condom 
+IRdata <- IRdata %>%
+  mutate(fp_know_mcond = 
+           ifelse(v304_05>0 & v304_05<8, 1, 0)) %>%
+  set_value_labels(fp_know_mcond = c(yes = 1, no = 0)) %>%
+  set_variable_labels(fp_know_mcond = "Know male condoms")
