@@ -68,3 +68,4 @@ IRdata <- IRdata %>%
            ifelse(v304_05>0 & v304_05<8, 1, 0)) %>%
   set_value_labels(fp_know_mcond = c(yes = 1, no = 0)) %>%
   set_variable_labels(fp_know_mcond = "Know male condoms")
+
